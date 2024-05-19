@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter - Dollar and Yen</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; }
+        .container { margin-top: 50px; }
+        h1 { color: #28a745; }
+        p { font-size: 1.2em; }
+    </style>
+    <script>
+        // JavaScript to convert 100 Pesos to Dollar and Yen
+        const pesoAmount = 100;
+        const dollarRate = 0.050; // 1 Peso = 0.050 Dollar
+        const yenRate = 5.43; // 1 Peso = 5.43 Yen
+        
+        const dollars = pesoAmount * dollarRate;
+        const yens = pesoAmount * yenRate;
+        
+        // Output the results
+        function displayConversions() {
+            document.getElementById('dollarOutput').innerHTML = `100 Pesos is equal to ${dollars.toFixed(2)} Dollars.`;
+            document.getElementById('yenOutput').innerHTML = `100 Pesos is equal to ${yens.toFixed(2)} Yen.`;
+        }
+    </script>
+</head>
+<body onload="displayConversions()">
+    <div class="container">
+        <h1>Convert Pesos to Dollar and Yen</h1>
+        <p id="dollarOutput"></p>
+        <p id="yenOutput"></p>
+        <a href="index1.html" class="btn btn-primary">Back to Home</a>
+        <a href="1page3.html" class="btn btn-secondary">Next to Euro, Pound, and Baht</a>
+    </div>
+</body>
+</html>
